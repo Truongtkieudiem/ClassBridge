@@ -1,0 +1,5 @@
+ALTER TABLE audit_logs
+    ADD COLUMN IF NOT EXISTS actor_email TEXT,
+    ADD COLUMN IF NOT EXISTS entity_name TEXT,
+    ADD COLUMN IF NOT EXISTS session_id TEXT,
+    ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'success';

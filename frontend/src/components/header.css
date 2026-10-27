@@ -1,0 +1,223 @@
+.app-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  min-height: 64px;
+  padding: 8px 28px;
+  color: #fff;
+  background: linear-gradient(105deg, #123c65 0%, #24659b 100%);
+  box-shadow: 0 2px 8px rgb(14 43 73 / 18%);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.app-header-brand {
+  display: inline-flex;
+  flex: 0 0 178px;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+}
+
+.app-header-brand img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  object-position: center;
+  background: #05090e;
+  border-radius: 50%;
+}
+
+.app-header-search {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(430px, calc(100% - 460px));
+  min-width: 120px;
+  height: 38px;
+  padding: 0 12px;
+  color: #617185;
+  background: #fff;
+  border: 1px solid rgb(255 255 255 / 56%);
+  border-radius: 7px;
+  transform: translateX(-50%);
+}
+
+.app-header-search input {
+  width: 100%;
+  min-width: 0;
+  color: #172b42;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 13px;
+}
+
+.app-header-search input::placeholder {
+  color: #8290a0;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.app-header-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(255 255 255 / 62%);
+  font-size: 12px;
+}
+
+.app-header-language button {
+  padding: 5px 0;
+  color: rgb(255 255 255 / 76%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.app-header-language button.active,
+.app-header-language button:hover {
+  color: #fff;
+}
+
+.app-header-profile {
+  position: relative;
+}
+
+.app-header-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 230px;
+  padding: 4px 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.app-header-avatar {
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #1c568b;
+  background: #e7f0fb;
+  border: 2px solid rgb(255 255 255 / 68%);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.app-header-name {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-header-menu {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 9px);
+  right: 0;
+  min-width: 150px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgb(15 35 65 / 18%);
+}
+
+.app-header-menu button {
+  width: 100%;
+  padding: 9px 10px;
+  color: #344054;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.app-header-menu button:hover {
+  color: #174f91;
+  background: #f1f6fc;
+}
+
+@media (max-width: 680px) {
+  .app-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(64px, 24vw) minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .app-header-brand {
+    justify-self: start;
+    flex-basis: auto;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .app-header-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .app-header-search {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+    padding: 0 8px;
+    transform: none;
+  }
+
+  .app-header-search input {
+    font-size: 11px;
+  }
+
+  .app-header-actions {
+    justify-self: end;
+    gap: 6px;
+  }
+
+  .app-header-name {
+    max-width: 52px;
+    font-size: 11px;
+  }
+
+  .app-header-profile-button {
+    max-width: 100px;
+    gap: 4px;
+  }
+
+  .app-header-language {
+    gap: 5px;
+  }
+}

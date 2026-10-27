@@ -1,0 +1,370 @@
+.container {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  max-width: 42rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.stepHeader {
+  margin-bottom: 2rem;
+}
+
+.stepLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.activeLabel {
+  color: #1e1b4b;
+  font-weight: bold;
+}
+
+.progressWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressTrack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+.progressBar {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background-color: #1e1b4b;
+  z-index: 0;
+  transition: width 0.3s ease;
+}
+
+.stepDot {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background-color: #d1d5db;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.stepDotActive {
+  background-color: #1e1b4b;
+  color: white;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.titleSection h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e1b4b;
+}
+
+.titleSection p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.roleButton {
+  border: 2px solid #d1d5db;
+  background: white;
+  padding: 0.625rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.roleButtonActive {
+  border-color: #1e1b4b;
+  background-color: #1e1b4b;
+  color: white;
+}
+
+.inputGroupGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.inputField::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.inputField:focus {
+  border-color: #1e1b4b;
+}
+
+.inputField[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.inputField[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+}
+
+.inputIconRight {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.625rem;
+  color: #16a34a;
+  font-size: 0.875rem;
+}
+
+.subLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.fieldError {
+  margin: 0.3rem 0 0;
+  color: #dc2626;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.emailRequirements {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+.emailRequirementMet {
+  color: #15803d;
+}
+
+.emailRequirementUnmet {
+  color: #dc2626;
+}
+
+.emailCheckSuccess {
+  margin: 0.3rem 0 0;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.passwordRequirements {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+.passwordRequirementMet {
+  color: #15803d;
+}
+
+.passwordRequirementUnmet {
+  color: #dc2626;
+}
+
+.verificationStep {
+  padding: 1rem 0;
+}
+
+.verificationTimer {
+  margin: 0.5rem 0 0;
+  color: #1e1b4b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.verificationTimerExpired {
+  color: #dc2626;
+}
+
+.verificationChoices {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.verificationChoice {
+  min-height: 48px;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.verificationChoice:hover {
+  border-color: #1e1b4b;
+}
+
+.verificationChoice:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.verificationChoiceSelected {
+  border-color: #1e1b4b;
+  background: #1e1b4b;
+  color: #ffffff;
+}
+
+.resendPrompt {
+  margin-top: 0.75rem;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.resendButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1e1b4b;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resendButton:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.backBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  background: white;
+  cursor: pointer;
+}
+
+.nextBtn {
+  width: 100%;
+  background-color: #1e1b4b;
+  color: white;
+  padding: 0.625rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nextBtn:hover {
+  background-color: #312e81;
+}
+
+.footerLink {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.footerLink a {
+  font-size: 0.75rem;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.footerLink a:hover {
+  color: #1e1b4b;
+  text-decoration: underline;
+}

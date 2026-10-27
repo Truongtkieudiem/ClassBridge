@@ -1,0 +1,354 @@
+.page {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 32px;
+  background: #f8fafc;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  color: #0f172a;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.heading p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addButton {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addButton {
+  color: #fff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.addButton:hover { background: #1d4ed8; }
+
+.filterToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 84px;
+  margin-top: 18px;
+}
+
+.filtersLeft {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.searchInput {
+  flex: 1 1 260px;
+  min-width: 180px;
+  height: 42px;
+  padding: 0 16px;
+  color: #f4f4f5;
+  background: #080808;
+  border: 1px solid #27272a;
+  border-radius: 999px;
+  outline: none;
+}
+
+.searchInput::placeholder { color: #a1a1aa; }
+.searchInput:focus { border-color: #52525b; }
+
+.filtersLeft select {
+  flex: 0 1 140px;
+  min-width: 110px;
+  height: 42px;
+  padding: 0 30px 0 12px;
+  color: #334155;
+  background: #fff;
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.periodSwitch {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: #eef2f7;
+  border-radius: 10px;
+}
+
+.periodSwitch button {
+  min-height: 34px;
+  padding: 0 12px;
+  color: #64748b;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.periodSwitch .periodActive {
+  color: #1d4ed8;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.notice {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ===== Session cards ===== */
+.sessionsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.sessionsMessage {
+  margin: 24px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.sessionCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.sessionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.sessionCard:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Phiên nổi bật: đang diễn ra hoặc gần diễn ra nhất */
+.featuredCard {
+  border-width: 2px;
+}
+
+.liveCard.featuredCard {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fff 55%, #fee2e2 130%);
+  box-shadow: 0 6px 22px rgba(239, 68, 68, 0.22);
+}
+
+.upcomingCard.featuredCard {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, #fff 55%, #fef3c7 130%);
+  box-shadow: 0 6px 22px rgba(245, 158, 11, 0.2);
+}
+
+.featuredTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-start;
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.liveCard .featuredTag {
+  background: linear-gradient(90deg, #ef4444, #f97316);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}
+
+.upcomingCard .featuredTag {
+  background: linear-gradient(90deg, #f59e0b, #f97316);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+.sessionCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sessionIdentity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sessionIcon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border-radius: 12px;
+}
+
+.liveCard .sessionIcon {
+  color: #fff;
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.sessionIdentity h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sessionIdentity p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.sessionTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.liveBadge,
+.upcomingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.liveBadge {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.upcomingBadge {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.moreButton {
+  flex: 0 0 auto;
+  color: #94a3b8;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.moreButton:hover { color: #334155; }
+
+.sessionMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.sessionMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sessionMeta svg { color: #6366f1; }
+
+.liveCard .sessionMeta svg { color: #ef4444; }
+
+.metaHighlight {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.detailsButton {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  color: #fff;
+  background: #2563eb;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.detailsButton:hover { background: #1d4ed8; }
+
+.liveCard .detailsButton {
+  background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+.liveCard .detailsButton:hover {
+  background: linear-gradient(90deg, #dc2626, #ea580c);
+}
+
+@media (max-width: 900px) {
+  .filterToolbar { align-items: stretch; flex-direction: column; gap: 12px; }
+  .filtersLeft { flex-wrap: wrap; }
+  .periodSwitch { align-self: flex-end; }
+}
+
+@media (max-width: 520px) {
+  .page { padding: 18px 16px; }
+  .heading h1 { font-size: 24px; }
+  .filtersLeft select { flex: 1 1 30%; }
+  .searchInput { flex-basis: 100%; }
+}

@@ -1,0 +1,548 @@
+/* Container chính */
+.dashboardContainer {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Buttons */
+.btnSecondary {
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btnSecondary:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.spinning svg {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 1. Stat Cards Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.statIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.flexAlign {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badgeHighlight {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.statSubtext {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Layout Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards General */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardSub {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0.25rem 0 0 0;
+}
+
+.iconPrimary {
+  color: #2563eb;
+}
+.iconWarning {
+  color: #d97706;
+}
+.iconSuccess {
+  color: #16a34a;
+}
+.iconPurple {
+  color: #9333ea;
+}
+
+/* Groups List */
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.groupItem {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.groupMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.groupTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  flex: 1;
+}
+
+.groupTags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.langTag {
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.badgeAnswered {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badgePending {
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressBarTrack {
+  flex: 1;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: #2563eb;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.studentCountText {
+  font-size: 0.8125rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+/* STT Latency Visual */
+.latencyStatusBadge {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+}
+
+.latencyVisual {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.latencyGridBars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 160px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.latencyBarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.barValue {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.375rem;
+}
+
+.barContainer {
+  width: 24px;
+  height: 110px;
+  background-color: #f1f5f9;
+  border-radius: 0.25rem 0.25rem 0 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.barFill {
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: height 0.3s ease;
+}
+
+.barTime {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.targetLineGroup {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  border-top: 1.5px dashed #dc2626;
+  pointer-events: none;
+}
+
+.targetLabel {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 0.6875rem;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Engagement Section */
+.engagementGauge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.scoreCircle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: conic-gradient(#16a34a 0% 88%, #e2e8f0 88% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scoreCircle::before {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  background: white;
+  border-radius: 50%;
+}
+
+.scoreNumber {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.scoreLabel {
+  position: relative;
+  font-size: 0.6875rem;
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.engagementList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.engagementRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.catName {
+  color: #334155;
+  font-weight: 500;
+}
+
+.catPercent {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.miniBarTrack {
+  height: 6px;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.miniBarFill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+/* Feedback Section */
+.feedbackList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.feedbackCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.875rem;
+}
+
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.375rem;
+}
+
+.authorName {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 0.5rem;
+}
+
+.roleLecturer {
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.roleStudent {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.feedbackTime {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.commentText {
+  font-size: 0.8125rem;
+  color: #334155;
+  margin: 0 0 0.375rem 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.ratingStars {
+  color: #f59e0b;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
